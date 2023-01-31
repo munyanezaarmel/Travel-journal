@@ -8,7 +8,8 @@ const [formData,setFormData]=useState({
     password:"",
     confirmPassword:"",
     checkbox:false,
-    employment:""
+    employment:"",
+    favColor:""
 
 })
 console.log(formData)
@@ -22,9 +23,17 @@ function handleChange(event){
         }
     })
 }
-function handleSubmit(){
-    e.preventDefault()
-    console.log(formData)
+function handleSubmit(event){
+    event.preventDefault()
+    if(formData.confirmPassword==formData.password){
+        console.log("account created successful")
+    }
+    else{
+        console.log("password do not match")
+    }
+  if(formData.checkbox){
+    console.log("thanks for signiup to our newslatter")
+  }
 }
     return (
         <div>
@@ -37,10 +46,15 @@ function handleSubmit(){
             <input type="checkbox" name="checkbox"onChange={handleChange}  id="checked" checked={formData.checkbox} />
             <fieldset>
    <label htmlFor="unemployed">unemployed</label>
-   <input type="radio" id="unemployed" onChange={handleChange} name='employment' checked={formData.employment="unemployed"} /><br />
+   <input type="radio" id="unemployed" onChange={handleChange} name='employment' checked={formData.employment==="unemployed"} /><br />
    <label htmlFor="employed"></label>employed
-   <input type="radio" id="employed" onChange={handleChange} name='employment' checked={formData.employment="employed"}  />
+   <input type="radio" id="employed" onChange={handleChange} name='employment' checked={formData.employment==="employed"}  />
    </fieldset>
+   <select name="favColor" id="favColor" onChange={handleChange}>
+    <option value="">---choose---</option>
+    <option value="yellow">Yellow</option>
+    <option value="blue">Blue</option>
+   </select>
             <button onClick={handleSubmit}>Sign up</button><br />
             </form>
         </div>
