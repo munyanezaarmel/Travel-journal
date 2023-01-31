@@ -3,7 +3,7 @@ import japan from '../images/japan.png'
 import austria from '../images/austria.png';
 import norway from '../images/norway.png';
 const data =[
-    { 
+    {   id:1,
         image:japan,
         name:"JAPAN",
         title:"Mount Fouji",
@@ -12,14 +12,14 @@ const data =[
 
        
 },
-    {
+    {   id:2,
         image:austria,
         name:"AUSTRILIA",
         title:"Sydney Opera House",
         date:"27 May, 2021 - 8 Jun, 2021",
         description:"The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the banks of the Sydney Harbour, it is often regarded as one of the 20th century's most famous and distinctive buildings"
     },
-    {
+    {   id:3,
         image:norway,
         name:"NORWAY",
         title:"Geirangerfjord",
