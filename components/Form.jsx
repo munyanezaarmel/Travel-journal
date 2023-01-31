@@ -30,6 +30,7 @@ function handleSubmit(event){
     }
     else{
         console.log("password do not match")
+        return
     }
   if(formData.checkbox){
     console.log("thanks for signiup to our newslatter")
